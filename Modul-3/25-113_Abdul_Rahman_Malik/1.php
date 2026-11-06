@@ -1,5 +1,5 @@
 <?php
-$fruits = array("Avocado", "Blueberry", "Cherry");
+$fruits = array("Aovcado", "Blueberry", "Cherry");
 
 // 1.1 Tambah lima data baru
 echo '<p><b>1.1 Menambahkan lima data baru dalam array $fruits! Tampilkan nilai dengan indeks tertinggi dari array $fruits!</b></p>';
