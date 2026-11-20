@@ -1,0 +1,92 @@
+/* Gaya dasar */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f2f5f9; color: #223; }
+a { color: #1a5fb4; }
+
+/* Navbar biru */
+.navbar { background: #1c4587; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.nav-kiri, .nav-kanan { display: flex; align-items: center; }
+.navbar a, .tombol-logout { color: #fff; text-decoration: none; padding: 16px 14px; display: block; font-size: 14px; }
+.navbar a:hover, .navbar a.aktif { background: rgba(255,255,255,.15); }
+.brand { font-weight: bold; font-size: 16px !important; margin-right: 10px; }
+
+/* Dropdown: tampil saat hover atau saat fokus (agar bisa di layar sentuh) */
+.dropdown { position: relative; }
+.dropdown-isi { display: none; position: absolute; left: 0; top: 100%; min-width: 170px; background: #fff; border-radius: 0 0 6px 6px; box-shadow: 0 6px 14px rgba(0,0,0,.2); z-index: 10; }
+.dropdown-isi.kanan { left: auto; right: 0; }
+.dropdown:hover .dropdown-isi, .dropdown:focus-within .dropdown-isi { display: block; }
+.dropdown-isi a { color: #223; }
+.dropdown-isi a:hover { background: #e8eef8; }
+.info-level { display: block; padding: 10px 14px; font-size: 12px; color: #667; border-bottom: 1px solid #e3e7ee; }
+.tombol-logout { width: 100%; background: none; border: 0; text-align: left; cursor: pointer; color: #b3261e; font-family: inherit; }
+.tombol-logout:hover { background: #fdeceb; }
+
+/* Konten */
+.konten { max-width: 1050px; margin: 24px auto; padding: 0 16px; }
+.kartu { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 20px; }
+h1 { margin-top: 0; font-size: 24px; }
+h2 { font-size: 18px; margin-top: 0; }
+.kecil { color: #667; font-size: 13px; }
+
+/* Ringkasan angka di Home dan Laporan */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.ringkas { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.ringkas .angka { font-size: 28px; font-weight: bold; color: #1c4587; }
+
+/* Tabel */
+.bungkus-tabel { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 10px 12px; border-bottom: 1px solid #e3e7ee; text-align: left; font-size: 14px; }
+th { background: #eaf0fa; }
+.teks-kanan { text-align: right; }
+.kosong { text-align: center; color: #667; padding: 24px; }
+
+/* Form */
+label { display: block; margin: 12px 0 4px; font-weight: bold; font-size: 14px; }
+input[type=text], input[type=password], input[type=date], input[type=number], textarea, select { width: 100%; padding: 9px 10px; border: 1px solid #b9c2d0; border-radius: 5px; font-size: 14px; }
+.error-field { color: #b3261e; font-size: 12px; margin-top: 3px; display: block; }
+.baris-filter { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.baris-filter > div { flex: 1; min-width: 160px; }
+.baris-filter label { margin-top: 0; }
+form.inline { display: inline; }
+
+/* Tombol */
+.btn { display: inline-block; padding: 9px 16px; border: 0; border-radius: 5px; cursor: pointer; font-size: 14px; text-decoration: none; background: #dde3ee; color: #223; }
+.btn-utama { background: #1c4587; color: #fff; }
+.btn-hijau { background: #1e8e3e; color: #fff; }
+.btn-merah { background: #c5221f; color: #fff; }
+.btn-kecil { padding: 5px 10px; font-size: 12px; }
+.btn-penuh { width: 100%; margin-top: 18px; }
+.aksi { white-space: nowrap; }
+.atas-tabel { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+
+/* Pesan */
+.alert { padding: 12px 14px; border-radius: 5px; margin-bottom: 16px; font-size: 14px; }
+.alert-sukses { background: #e6f4ea; color: #137333; }
+.alert-error { background: #fce8e6; color: #b3261e; }
+
+/* Badge status pembayaran */
+.badge { padding: 3px 9px; border-radius: 10px; font-size: 12px; background: #e3e7ee; }
+.badge-BelumBayar { background: #fce8e6; color: #b3261e; }
+.badge-Sebagian { background: #fff3cd; color: #7a5b00; }
+.badge-Lunas { background: #d9f2e0; color: #137333; }
+
+/* Halaman login */
+.halaman-login { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #1c4587; }
+.kotak-login { background: #fff; padding: 30px; border-radius: 10px; width: 100%; max-width: 360px; }
+.kotak-login h2 { margin-bottom: 4px; }
+
+/* Laporan: grafik, tombol oranye, dan kartu ringkasan */
+.bungkus-grafik { position: relative; height: 320px; max-width: 100%; margin-bottom: 20px; }
+.aksi-laporan { margin-bottom: 18px; }
+.btn-oranye { background: #e8590c; color: #fff; }
+.tabel-ringkas { max-width: 520px; margin-top: 16px; }
+.tabel-ringkas th { background: #d9ecf7; }
+
+/* Cetak: sembunyikan navbar, form filter, dan tombol supaya hasil cetak bersih */
+@media print {
+    .no-print, .navbar { display: none !important; }
+    body { background: #fff; }
+    .konten { margin: 0; max-width: none; padding: 0; }
+    .kartu { box-shadow: none; padding: 0; }
+}
